@@ -7,26 +7,30 @@
 
 /* General styles */
 body {
-    min-height: 100vh;
     display: flex;
+    align-items: center;
+    background: url(assets/images/mordor.webp) no-repeat center center / cover;
     flex-direction: column;
-
-    /* Generic project styles */
-    color: #3a3a3a;
+    background-attachment: fixed;
+    height: 100vh;
+    justify-content: space-evenly;
 }
 
 header {
-    color: bisque;
-    background-color: brown;
+    background-color: rgb(160 138 100 / 90%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: 2px solid;
+    box-shadow: 0 2px 13px 0px #ffcd67;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
-main {
-    color: burlywood;
-    background-color: black;
-    flex: 1 0 auto;
-}
-
-footer {
-    color: black;
-    background-color: brown;
+#header-h1 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #040404; 
+    font-size: 20px;
 }

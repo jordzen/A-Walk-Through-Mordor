@@ -155,6 +155,7 @@ function enableNextStage() {
 // Start the game function
 function startGame() {
     createAllRows();
+    enableNextStage()
 }
 
 // Show the start modal when the page is loaded

@@ -27,6 +27,7 @@
         </h1>
     </header>
     <!-- Main Game Page-->
+    <main>
         <div id="game-container">
             <div id="game">
             </div>
@@ -34,9 +35,18 @@
         <div>
             <h2 id="start">START</h2>
         </div>
+        <!-- Incorrect card Modal pop-up -->
+        <div id="incorrect-card-modal" class="modal">
+            <div class="modal-content">
+                <div id="modal-message"></div>
+                <div id="modal-image"></div>
+                <div id="modal-threshold"></div>
+                <button id="roll-dice-btn">Roll the dice</button>
+            </div>
+        </div>
         <!-- Start Pop-up -->
         <div id="start-modal">
-            <div id="start-modal-content">
+            <div id="start-modal-content" class="modal">
                 <h1>A Walk Through Mordor</h1>
                 <img id="intro-image" src="/assets/images/mordor-intro.jpg" alt="intro-image">
                 <h2 id="intro-h2">"One does not simply walk into Mordor...".</h2>
@@ -67,6 +77,7 @@
                 <button class="start-game-btn">Start Game</button>
             </div>
         </div>
+    </main>
     <!-- JavaScript link -->
     <script src="assets/js/script.js"></script>
 </body>

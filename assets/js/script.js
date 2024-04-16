@@ -2,8 +2,9 @@
 const numRows = 4;
 const numCards = [2, 3, 4, 5];
 
-let correctCardIndices = [];
 let currentStage = 0;
+let correctCardIndices = [];
+let selectableRows = 1;
 
 // Function to create cards for all rows
 function createAllRows() {

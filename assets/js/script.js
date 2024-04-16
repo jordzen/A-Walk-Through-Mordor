@@ -6,6 +6,16 @@ let currentStage = 0;
 let correctCardIndices = [];
 let selectableRows = 1;
 
+// Images to be displayed
+    
+const incorrectImages = [
+    { image: "/assets/images/ork-guard.webp", threshold: 7, message: "A patrolling Ork Guard has spotted you! \n Roll the dice to fight back!" },
+    { image: "/assets/images/sauron.webp", threshold: 14, message: "You Have been tempted by the ring and put it on. \n You are now in the enemys gaze! roll to overpower temptaion" },
+    { image: "/assets/images/gollum.webp", threshold: 10, message: "Gollum has followed you through. \n Roll to finish him off!" },
+    { image: "/assets/images/nasgul.webp", threshold: 12, message: "A Ring Wraith has caught your scent. \n Roll to avoid him" },
+    { image: "/assets/images/ork-captain.webp", threshold: 9, message: "A patrolling Ork Captain has spotted you! \n Roll the dice to fight back!" }
+];
+
 // Function to show the start modal
 function showStartModal() {
     document.getElementById("start-modal").style.display = "block";
@@ -88,6 +98,18 @@ for (let i = 0; i < num; i++) {
 // Show modal with message and image
 function showModal() {
     let modal = document.getElementById("incorrect-card-modal");
+    let modalMessage = document.getElementById("modal-message");
+    let modalImage = document.getElementById("modal-image");
+    let modalThreshold = document.getElementById("modal-threshold");
+
+    // Get a random incorrect image
+    let randomIncorrectImage = incorrectImages[Math.floor(Math.random() * incorrectImages.length)];
+
+    modalMessage.textContent = randomIncorrectImage.message;
+    modalImage.innerHTML = `<img src="${randomIncorrectImage.image}" alt="Incorrect Image">`;
+    modalThreshold.textContent = `Required dice roll: ${randomIncorrectImage.threshold}+`;
+
+    modal.style.display = "block";
 }
 
 // Function to enable cards in the next selectable row

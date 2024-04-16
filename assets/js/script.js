@@ -6,6 +6,11 @@ let currentStage = 0;
 let correctCardIndices = [];
 let selectableRows = 1;
 
+// Function to show the start modal
+function showStartModal() {
+    document.getElementById("start-modal").style.display = "block";
+}
+
 // Function to create cards for all rows
 function createAllRows() {
     for (let i = 0; i < numRows; i++) {
@@ -71,5 +76,5 @@ function startGame() {
 
 // Show the start modal when the page is loaded
 window.onload = function() {
-    startGame();
+    showStartModal();
 }

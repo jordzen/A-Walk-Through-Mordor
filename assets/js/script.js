@@ -33,6 +33,8 @@ for (let i = 0; i < num; i++) {
         if (stage === currentStage && card.dataset.correct === 'true') {
         card.style.backgroundColor = 'green';
         currentStage++;
+        selectableRows++;
+        enableNextStage();
         } else {
             card.style.backgroundColor = '#ab2828';
         }
@@ -42,6 +44,23 @@ for (let i = 0; i < num; i++) {
     document.getElementById('game').appendChild(row);
         if (stage !== 0) {
         row.style.pointerEvents = 'none'; // Disable card selection for rows after the first one
+    }
+}
+
+// Function to enable cards in the next selectable row
+function enableNextStage() {
+    let rows = document.getElementsByClassName('row');
+    for (let i = 0; i < numRows; i++) {
+        let cards = rows[i].getElementsByClassName('card');
+        if (i === selectableRows - 1) {
+            for (let j = 0; j < cards.length; j++) {
+                cards[j].style.pointerEvents = 'auto';
+            }
+        } else {
+            for (let j = 0; j < cards.length; j++) {
+                cards[j].style.pointerEvents = 'none';
+            }
+        }
     }
 }
 

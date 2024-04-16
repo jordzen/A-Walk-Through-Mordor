@@ -16,14 +16,31 @@ function hideStartModal() {
     document.getElementById("start-modal").style.display = "none";
 }
 
+// Function to show the rules modal
+function showRulesModal() {
+    document.getElementById("rules").style.display = "block";
+}
+
+// Function to hide the rules modal
+function hideRulesModal() {
+    document.getElementById("rules").style.display = "none";
+}
+
 // Get all elements with the class name 'start-game-btn'
 let elements = document.querySelectorAll('.start-game-btn');
-// Add event listener to class name 'start-game-btn'
+// event listener to class name 'start-game-btn'
 elements.forEach(function(element) {
     element.addEventListener("click", function() {
         hideStartModal();
+        hideRulesModal();
         startGame(); 
     }); 
+});
+
+//event listener for 'read-rules-btn' id 
+document.getElementById("read-rules-btn").addEventListener("click", function() {
+    hideStartModal();
+    showRulesModal();
 });
 
 // Function to create cards for all rows

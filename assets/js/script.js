@@ -11,6 +11,21 @@ function showStartModal() {
     document.getElementById("start-modal").style.display = "block";
 }
 
+// Function to hide the start modal
+function hideStartModal() {
+    document.getElementById("start-modal").style.display = "none";
+}
+
+// Get all elements with the class name 'start-game-btn'
+let elements = document.querySelectorAll('.start-game-btn');
+// Add event listener to class name 'start-game-btn
+elements.forEach(function(element) {
+    element.addEventListener("click", function() {
+        hideStartModal();
+        startGame(); 
+    }); 
+});
+
 // Function to create cards for all rows
 function createAllRows() {
     for (let i = 0; i < numRows; i++) {

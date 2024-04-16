@@ -36,9 +36,12 @@ for (let i = 0; i < num; i++) {
             card.style.backgroundColor = '#ab2828';
         }
     });
-    row.appendChild(card);
-}
-document.getElementById('game').appendChild(row);
+        row.appendChild(card);
+    }
+    document.getElementById('game').appendChild(row);
+        if (stage !== 0) {
+        row.style.pointerEvents = 'none'; // Disable card selection for rows after the first one
+    }
 }
 
 // Start the game function

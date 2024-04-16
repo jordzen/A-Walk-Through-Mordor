@@ -95,6 +95,11 @@ for (let i = 0; i < num; i++) {
     }
 }
 
+// Function to roll a d20 dice
+function rollD20() {
+    return Math.floor(Math.random() * 20) + 1;
+}
+
 // Show modal with message and image
 function showModal() {
     let modal = document.getElementById("incorrect-card-modal");
@@ -108,6 +113,24 @@ function showModal() {
     modalMessage.textContent = randomIncorrectImage.message;
     modalImage.innerHTML = `<img src="${randomIncorrectImage.image}" alt="Incorrect Image">`;
     modalThreshold.textContent = `Required dice roll: ${randomIncorrectImage.threshold}+`;
+
+    // Roll dice button
+    let rollDiceBtn = document.getElementById("roll-dice-btn");
+    rollDiceBtn.onclick = function() {
+        let diceResult = rollD20();
+        alert("You rolled the dice! Result: " + diceResult);
+        if (diceResult < randomIncorrectImage.threshold) {
+            alert("Darkness takes you. YOU LOSE.");
+            location.reload(); // Reload the page to play again   
+            } else {
+            if (diceResult === 20) {
+                alert("You rolled a natural 20! The Ilúvatar smiles upon you.");
+            } else {
+                alert("You overcome the obstacle, you gather yourself and carry on.");
+            }
+            modal.style.display = "none";
+        }
+    }
 
     modal.style.display = "block";
 }

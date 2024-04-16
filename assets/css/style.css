@@ -64,4 +64,12 @@ header {
 .row {
     display: flex;
     margin: 10px;
+} 
+
+#start { 
+    font-size: 25px;
+    color: #5eff4c;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    letter-spacing: 6px;
 }

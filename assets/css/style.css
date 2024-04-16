@@ -259,6 +259,14 @@ img {
     text-align: center;
 }
 
+.close {
+    color: #181515;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Responsive Design for large phones and larger */
 
 @media screen and (min-width: 400px) {

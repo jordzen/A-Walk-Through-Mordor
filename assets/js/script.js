@@ -5,6 +5,7 @@ const numCards = [2, 3, 4, 5];
 let currentStage = 0;
 let correctCardIndices = [];
 let selectableRows = 1;
+let span = document.getElementsByClassName("close")[0];
 
 // Images to be displayed
     
@@ -143,6 +144,12 @@ function showModal() {
     }
 
     modal.style.display = "block";
+}
+
+// When the user clicks on <span>(x) on the finish modal, close the modal and reload the page
+span.onclick = function() {
+    document.getElementById("finish-modal").style.display = "none";
+    location.reload(); 
 }
 
 // Function to enable cards in the next selectable row

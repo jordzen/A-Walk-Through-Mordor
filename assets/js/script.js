@@ -18,7 +18,7 @@ function hideStartModal() {
 
 // Get all elements with the class name 'start-game-btn'
 let elements = document.querySelectorAll('.start-game-btn');
-// Add event listener to class name 'start-game-btn
+// Add event listener to class name 'start-game-btn'
 elements.forEach(function(element) {
     element.addEventListener("click", function() {
         hideStartModal();

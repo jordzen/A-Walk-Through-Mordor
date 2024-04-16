@@ -36,6 +36,11 @@ function hideRulesModal() {
     document.getElementById("rules").style.display = "none";
 }
 
+//function to show the finish modal 
+function showFinishModal() {
+    document.getElementById("finish-modal").style.display = "block";
+}
+
 // Get all elements with the class name 'start-game-btn'
 let elements = document.querySelectorAll('.start-game-btn');
 // event listener to class name 'start-game-btn'
@@ -78,12 +83,17 @@ for (let i = 0; i < num; i++) {
     //Click function to show if card sleected was correct or incorrect
     card.addEventListener('click', function() {
         if (stage === currentStage && card.dataset.correct === 'true') {
-        card.style.backgroundColor = 'green';
-        currentStage++;
-        selectableRows++;
-        enableNextStage();
+            card.style.backgroundColor = 'green';
+            if (currentStage === numRows - 1) {
+                showFinishModal()
+            } else {
+                currentStage++;
+                selectableRows++;
+                enableNextStage();
+            }
         } else {
             card.style.backgroundColor = '#ab2828';
+            // Show the modal with the message and image
             showModal();
         }
     });

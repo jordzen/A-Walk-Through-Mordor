@@ -2,6 +2,7 @@
 const numRows = 4;
 const numCards = [2, 3, 4, 5];
 
+let correctCardIndices = [];
 let currentStage = 0;
 
 // Function to create cards for all rows
@@ -16,9 +17,25 @@ function createRow(stage, num) {
     let row = document.createElement('div');
     row.classList.add('row');
 
+// Generate a random index for the correct card
+let correctIndex = Math.floor(Math.random() * num);
+
 for (let i = 0; i < num; i++) {
     let card = document.createElement('div');
     card.classList.add('card');
+    // Set the correct card style
+    if (i === correctIndex) {
+    card.dataset.correct = true;
+    }
+    //Click function to show if card sleected was correct or incorrect
+    card.addEventListener('click', function() {
+        if (stage === currentStage && card.dataset.correct === 'true') {
+        card.style.backgroundColor = 'green';
+        currentStage++;
+        } else {
+            card.style.backgroundColor = '#ab2828';
+        }
+    });
     row.appendChild(card);
 }
 document.getElementById('game').appendChild(row);

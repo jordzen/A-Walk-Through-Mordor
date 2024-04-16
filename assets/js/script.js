@@ -74,6 +74,7 @@ for (let i = 0; i < num; i++) {
         enableNextStage();
         } else {
             card.style.backgroundColor = '#ab2828';
+            showModal();
         }
     });
         row.appendChild(card);
@@ -82,6 +83,11 @@ for (let i = 0; i < num; i++) {
         if (stage !== 0) {
         row.style.pointerEvents = 'none'; // Disable card selection for rows after the first one
     }
+}
+
+// Show modal with message and image
+function showModal() {
+    let modal = document.getElementById("incorrect-card-modal");
 }
 
 // Function to enable cards in the next selectable row

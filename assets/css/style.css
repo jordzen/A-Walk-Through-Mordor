@@ -28,6 +28,18 @@ header {
     color: white;
 }
 
+p {
+    font-size: 11px;
+    font-family: "Changa", sans-serif;
+    margin: 0px 0px 5px 0px;
+}
+
+h1 {
+    font-size: 20px;
+    font-family: "Hammersmith One", sans-serif;
+    margin-top: 0px;
+}
+
 #header-h1 {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -74,10 +86,15 @@ header {
     letter-spacing: 6px;
 }
 
-p {
-    font-size: 11px;
-    font-family: "Changa", sans-serif;
-    margin: 0px 0px 5px 0px;
+#image-display img {
+    width: 150%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+div#image-display {
+    margin-top: 150px;
 }
 
 /*start modal*/

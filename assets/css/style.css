@@ -81,11 +81,12 @@ h1 {
 } 
 
 #start { 
-    font-size: 25px;
     color: #5eff4c;
     margin-top: 10px;
     margin-bottom: 50px;
     letter-spacing: 6px;
+    display: flex;
+    justify-content: center;
 }
 
 #header-h1 {
@@ -442,10 +443,6 @@ button#roll-dice-btn {
 
     p {
         font-size: 15px;
-    }
-
-    #start {
-        font-size: 25px;
     }
 
     img#intro-image {

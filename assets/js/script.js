@@ -42,7 +42,6 @@ function showFinishModal() {
     document.getElementById("finish-modal").style.display = "block";
 }
 
-// Get all elements with the class name 'start-game-btn'
 let elements = document.querySelectorAll('.start-game-btn');
 // event listener to class name 'start-game-btn'
 elements.forEach(function(element) {

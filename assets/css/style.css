@@ -146,6 +146,7 @@ button.start-game-btn {
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: black;
 }
 
 button#read-rules-btn {
@@ -158,6 +159,7 @@ button#read-rules-btn {
     border-style: groove;
     margin: 1%;
     cursor: pointer;
+    color: black;
 }
 
 #intro-h2 {

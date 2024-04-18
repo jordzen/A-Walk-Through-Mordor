@@ -70,6 +70,11 @@ function createRow(stage, num) {
     let row = document.createElement('div');
     row.classList.add('row');
 
+// Create a label to display the stage number
+let stageLabel = document.createElement('p');
+stageLabel.textContent = `Stage ${stage + 1}`;
+row.appendChild(stageLabel);
+
 // Generate a random index for the correct card
 let correctIndex = Math.floor(Math.random() * num);
 
@@ -99,9 +104,12 @@ for (let i = 0; i < num; i++) {
     });
         row.appendChild(card);
     }
-    document.getElementById('game').appendChild(row);
-        if (stage !== 0) {
-        row.style.pointerEvents = 'none'; // Disable card selection for rows after the first one
+       // Append stageLabel and row to the game container
+        let gameContainer = document.getElementById('game');
+        gameContainer.appendChild(stageLabel);
+        gameContainer.appendChild(row);
+            if (stage !== 0) {
+            row.style.pointerEvents = 'none'; // Disable card selection for rows after the first one
     }
 }
 

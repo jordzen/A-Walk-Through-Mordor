@@ -59,7 +59,11 @@ h1 {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin-top: 100px;
+}
+
+#game p {
+    color: #21ff63;
+    margin: 0;
 }
 
 .card {
@@ -79,15 +83,6 @@ h1 {
     display: flex;
     margin: 10px;
 } 
-
-#start { 
-    color: #5eff4c;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    letter-spacing: 6px;
-    display: flex;
-    justify-content: center;
-}
 
 #header-h1 {
     margin-top: 15px;

@@ -8,6 +8,13 @@
 }
 
 /* General styles */
+
+main {
+    /* make main element take up any surplus space to push footer down*/
+    flex: 1 0 auto;
+    display: flex;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -301,6 +308,12 @@ button#roll-dice-btn {
     cursor: pointer;
 }
 
+/* Footer */
+footer {
+    background-color: rgb(224 227 227);
+    color: black;
+}
+
 /* Responsive Design for large phones and larger */
 
 @media screen and (min-width: 400px) {
@@ -398,6 +411,7 @@ button#roll-dice-btn {
     #game h2 {
         font-size: 17px;
     }
+}
 
 /* Responsive Design for Tablets and larger */
 

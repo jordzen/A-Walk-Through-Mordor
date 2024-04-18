@@ -314,7 +314,7 @@ footer {
     color: #774343;
     width: 100%;
     height: 40px;
-    padding: 0 30%;
+    padding: 0 20%;
     box-shadow: #d70303 1px 1px 6px 1px;
 }
 
@@ -519,15 +519,7 @@ li {
     }
 
     li {
-        margin: 5px 0 0 0;
-    }
-
-    footer {
-        height: 90px;
-    }
-
-    body {
-        height: 103vh;
+        margin: 10px 0 10px 0;
     }
 
     /* Footer icons*/
@@ -537,6 +529,10 @@ li {
 
     .fa-brands.fa-facebook {
         font-size: 30px;
+    }
+
+    footer {
+        height: 60px;
     }
 }
 
@@ -591,6 +587,14 @@ li {
 
     .close {
         font-size: 50px;
+    }
+
+    .fa-brands.fa-twitter {
+        font-size: 40px;
+    }
+    
+    .fa-brands.fa-facebook {
+        font-size: 40px;
     }
 
 }

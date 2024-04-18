@@ -71,7 +71,7 @@ function createRow(stage, num) {
     row.classList.add('row');
 
 // Create a label to display the stage number
-let stageLabel = document.createElement('p');
+let stageLabel = document.createElement('h2');
 stageLabel.textContent = `Stage ${stage + 1}`;
 row.appendChild(stageLabel);
 

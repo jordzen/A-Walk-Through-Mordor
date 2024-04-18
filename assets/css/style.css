@@ -61,9 +61,10 @@ h1 {
     align-items: center;
 }
 
-#game p {
+#game h2 {
     color: #21ff63;
     margin: 0;
+    font-size: 12px;
 }
 
 .card {

@@ -18,7 +18,7 @@ main {
 body {
     display: flex;
     align-items: center;
-    background: url(/assets/images/mordor.webp) no-repeat center center / cover;
+    background: url(assets/images/mordor.webp) no-repeat center center / cover;
     flex-direction: column;
     background-attachment: fixed;
     height: 100vh;

@@ -62,9 +62,13 @@ h1 {
 }
 
 #game h2 {
-    color: #21ff63;
+    color: #ff2424;
     margin: 0;
     font-size: 12px;
+    background-color: #180303c4;
+    border-radius: 5px;
+    box-shadow: 0 2px 20px 8px #7d7d7d;
+    padding: 2px 5px 2px 5px;
 }
 
 .card {
@@ -390,7 +394,10 @@ button#roll-dice-btn {
         width: 6.8vw;
         height: 10vh;
     }
-}
+
+    #game h2 {
+        font-size: 17px;
+    }
 
 /* Responsive Design for Tablets and larger */
 
@@ -421,7 +428,10 @@ button#roll-dice-btn {
 
     div#modal-threshold {
         font-size: 18px;
-}
+    }
+    #game h2 {
+        font-size: 20px;
+    }
 }
 
 /* Responsive Design for Laptops and larger */
@@ -498,5 +508,9 @@ button#roll-dice-btn {
 
     #finish-p {
         font-size: 25px;
+    }
+
+    #game {
+        margin-top: 20px;
     }
 }

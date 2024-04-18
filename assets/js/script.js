@@ -10,11 +10,11 @@ let span = document.getElementsByClassName("close")[0];
 // Images to be displayed
     
 const incorrectImages = [
-    { image: "/assets/images/ork-guard.webp", threshold: 7, message: "A patrolling Ork Guard has spotted you! \n Roll the dice to fight back!" },
-    { image: "/assets/images/sauron.webp", threshold: 14, message: "You Have been tempted by the ring and put it on. \n You are now in the enemys gaze! roll to overpower temptaion" },
-    { image: "/assets/images/gollum.webp", threshold: 10, message: "Gollum has followed you through. \n Roll to finish him off!" },
-    { image: "/assets/images/nasgul.webp", threshold: 12, message: "A Ring Wraith has caught your scent. \n Roll to avoid him" },
-    { image: "/assets/images/ork-captain.webp", threshold: 9, message: "A patrolling Ork Captain has spotted you! \n Roll the dice to fight back!" }
+    { image: "assets/images/ork-guard.webp", threshold: 7, message: "A patrolling Ork Guard has spotted you! \n Roll the dice to fight back!" },
+    { image: "assets/images/sauron.webp", threshold: 14, message: "You Have been tempted by the ring and put it on. \n You are now in the enemys gaze! roll to overpower temptaion" },
+    { image: "assets/images/gollum.webp", threshold: 10, message: "Gollum has followed you through. \n Roll to finish him off!" },
+    { image: "assets/images/nasgul.webp", threshold: 12, message: "A Ring Wraith has caught your scent. \n Roll to avoid him" },
+    { image: "assets/images/ork-captain.webp", threshold: 9, message: "A patrolling Ork Captain has spotted you! \n Roll the dice to fight back!" }
 ];
 
 // Function to show the start modal

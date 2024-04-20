@@ -141,22 +141,27 @@ function showModal() {
     modalMessage.textContent = randomIncorrectImage.message;
     modalImage.innerHTML = `<img src="${randomIncorrectImage.image}" alt="Incorrect Image">`;
     modalThreshold.textContent = `Required dice roll: ${randomIncorrectImage.threshold}+`;
-
-    // Roll dice button
+    
     let rollDiceBtn = document.getElementById("roll-dice-btn");
     rollDiceBtn.onclick = function() {
         modal.style.display = "none";
         showDiceResult();
         let diceResult = rollD20();
-        getElementById("result").textContent = "You rolled the dice! Result: " + diceResult;
+        document.getElementById("result").textContent = "You rolled the dice! Result: " + diceResult;
+        
         if (diceResult < randomIncorrectImage.threshold) {
-            getElementById("result-lose").textContent = "Darkness takes you. YOU LOSE.";
-            location.reload(); // Reload the page to play again   
-            } else {
+            // User loses
+            document.getElementById("result-lose").textContent = "Darkness takes you. YOU LOSE.";
+            document.getElementById("result-win").style.display = "none"; // Hide win result
+            document.getElementById("dice-close").onclick = function() {
+                location.reload(); // Reload the page to play again   
+            };
+        } else {
+            // User wins
             if (diceResult === 20) {
-                getElementById("result-win").textContent = "You rolled a natural 20! The Ilúvatar smiles upon you.";
+                document.getElementById("result-win").textContent = "You rolled a natural 20! The Ilúvatar smiles upon you.";
             } else {
-                getElementById("result-win").textContent = "You overcome the obstacle, you gather yourself and carry on.";
+                document.getElementById("result-win").textContent = "You overcome the obstacle, you gather yourself and carry on.";
             }
         }
     }
@@ -166,13 +171,13 @@ function showModal() {
 
 // When the user clicks on <span>(x) on the dice result modal, close the modal
 document.getElementById("dice-close").onclick = function() {
-    document.getElementById("dice-result").style.display = "none"
+document.getElementById("dice-result").style.display = "none"
 }
 
 // When the user clicks on <span>(x) on the finish modal, close the modal and reload the page
-document.getElementById("finish-close").onclick = function() {
-    document.getElementById("finish-modal").style.display = "none";
-    location.reload(); 
+document.getElementById("reload-close").onclick = function() {
+document.getElementById("finish-modal").style.display = "none";
+location.reload(); 
 }
 
 // Function to enable cards in the next selectable row

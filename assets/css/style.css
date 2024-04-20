@@ -54,6 +54,15 @@ h1 {
     margin-top: 0px;
 }
 
+.close {
+    color: #ff0000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
 /*Main game style*/
 #game-container {
     display: flex;
@@ -280,11 +289,29 @@ button#roll-dice-btn {
 
 #dice-result-content { 
         background-color: #161515e8;
-        margin: 2% 10%;
+        margin: 40% 10%;
         padding: 20px;
         border: 3px solid #636060;
         border-radius: 5px;
         text-align: center;
+}
+
+#result {
+    color: aliceblue;
+    font-size: 17px;
+    margin: 70px 0 20px 0;
+}
+
+#result-win {
+    color: #6bff8c;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+#result-lose {
+    color: #ff1c1c;
+    font-size: 17px;
+    margin-bottom: 30px;
 }
 
 /* finish modal style */
@@ -322,14 +349,6 @@ button#roll-dice-btn {
     font-size: 15px;
     font-family: "Changa", sans-serif;
     margin: 20px 0px 50px 0px;
-}
-
-.close {
-    color: #181515;
-    float: right;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 /* Footer */
@@ -428,6 +447,10 @@ li {
     .fa-brands.fa-facebook {
         font-size: 25px;
     }
+
+    #dice-result-content {
+        margin: 30% 10%;
+    }
 }
 
 /* Responsive Design for larger phones and larger */
@@ -465,6 +488,10 @@ li {
 
     #finish-p {
         font-size: 18px;
+    }
+
+    #dice-result-content {
+        margin: 25% 10%;
     }
 }
 
@@ -558,6 +585,10 @@ li {
     footer {
         height: 60px;
     }
+
+    #dice-result-content {
+        margin: 17% 10%;
+    }
 }
 
 /* Responsive Design for Laptops and larger */
@@ -621,6 +652,9 @@ li {
         font-size: 40px;
     }
 
+    #dice-result-content {
+        margin: 12% 10%;
+    }
 }
 
 /* Responsive Design for Large Laptops and larger */
@@ -654,5 +688,8 @@ li {
 
     #finish-p {
         font-size: 25px;
+    }
+    #dice-result-content {
+        margin: 10% 10%;
     }
 }

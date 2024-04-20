@@ -42,6 +42,16 @@ function showFinishModal() {
     document.getElementById("finish-modal").style.display = "block";
 }
 
+//function to show the dice roll result
+function showDiceResult() {
+    document.getElementById("dice-result").style.display = "block";
+}
+
+//function to show hide dice roll result
+function hideDiceResult() {
+    document.getElementById("dice-result").style.display = "none";
+}
+
 let elements = document.querySelectorAll('.start-game-btn');
 // event listener to class name 'start-game-btn'
 elements.forEach(function(element) {
@@ -135,26 +145,32 @@ function showModal() {
     // Roll dice button
     let rollDiceBtn = document.getElementById("roll-dice-btn");
     rollDiceBtn.onclick = function() {
+        modal.style.display = "none";
+        showDiceResult();
         let diceResult = rollD20();
-        alert("You rolled the dice! Result: " + diceResult);
+        getElementById("result").textContent = "You rolled the dice! Result: " + diceResult;
         if (diceResult < randomIncorrectImage.threshold) {
-            alert("Darkness takes you. YOU LOSE.");
+            getElementById("result-lose").textContent = "Darkness takes you. YOU LOSE.";
             location.reload(); // Reload the page to play again   
             } else {
             if (diceResult === 20) {
-                alert("You rolled a natural 20! The Ilúvatar smiles upon you.");
+                getElementById("result-win").textContent = "You rolled a natural 20! The Ilúvatar smiles upon you.";
             } else {
-                alert("You overcome the obstacle, you gather yourself and carry on.");
+                getElementById("result-win").textContent = "You overcome the obstacle, you gather yourself and carry on.";
             }
-            modal.style.display = "none";
         }
     }
 
     modal.style.display = "block";
 }
 
+// When the user clicks on <span>(x) on the dice result modal, close the modal
+document.getElementById("dice-close").onclick = function() {
+    document.getElementById("dice-result").style.display = "none"
+}
+
 // When the user clicks on <span>(x) on the finish modal, close the modal and reload the page
-span.onclick = function() {
+document.getElementById("finish-close").onclick = function() {
     document.getElementById("finish-modal").style.display = "none";
     location.reload(); 
 }

@@ -41,6 +41,15 @@
                 <button id="roll-dice-btn">Roll the dice</button>
             </div>
         </div>
+        <!-- Dice Roll result pop-up -->
+        <div id="dice-result" class="modal">
+            <div id="dice-result-content">
+                <span class="close" id="dice-close">&times;</span>
+                <h1 id="result"></h1>
+                <p id="result-lose"></p>
+                <p id="result-win"></p>
+            </div>
+        </div>
         <!-- Start Pop-up -->
         <div id="start-modal">
             <div id="start-modal-content" class="modal">
@@ -86,7 +95,7 @@
         <!-- Finish Pop-up -->
         <div id="finish-modal">
             <div id="finish-modal-content">
-                <span class="close">&times;</span>
+                <span class="close" id="finish-close">&times;</span>
                 <h1 id="finish-h1">
                     YOU WIN
                 </h1>

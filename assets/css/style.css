@@ -374,8 +374,8 @@ li {
 }
 
 /* Footer icons*/
-.fa-brands.fa-twitter {
-    color: #3982ff;
+.fa-brands.fa-square-instagram {
+    color: #ff3939;
     font-size: 20px;
 }
 
@@ -440,7 +440,7 @@ li {
         margin: 8px 0 0 0;
     }
 
-    .fa-brands.fa-twitter {
+    .fa-brands.fa-square-instagram {
         font-size: 25px;
     }
     
@@ -519,7 +519,7 @@ li {
         height: 45px;
     }
 
-    .fa-brands.fa-twitter {
+    .fa-brands.fa-square-instagram {
         font-size: 30px;
     }
     
@@ -574,7 +574,7 @@ li {
     }
 
     /* Footer icons*/
-    .fa-brands.fa-twitter {
+    .fa-brands.fa-square-instagram {
         font-size: 30px;
     }
 
@@ -644,7 +644,7 @@ li {
         font-size: 50px;
     }
 
-    .fa-brands.fa-twitter {
+    .fa-brands.fa-square-instagram {
         font-size: 40px;
     }
     

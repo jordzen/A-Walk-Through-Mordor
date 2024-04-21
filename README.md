@@ -54,8 +54,35 @@ If they player selects a wrong card, they dont lose the game straight away. Ther
 
 ## **Wireframes**
 
-## **Features**
+I started out this project with the idea of wanting to do something where RNG was involved and the results are different every time. 
+I love the lord of the rings films, and they are also very popular and so i decided to base the game off of them.
+I started drawing out the concept for the game, where there are four stages of RNG choice involved, with progressing difficulty.
+I thought it would be a cool idea to have the user start at the entrance to mordor and the end result being mount doom, where they destroy the
+ring of power.
+I used the quote from the film where Boromir says 'one does not simply walk into Mordor' and made the title 'A walk through Mordor'.
 
+* [Game concept drawing.](docs/screenshots/wireframe3.png)
+* [Main Game page wireframe](docs/screenshots/wireframe1.png)
+
+On page load, I wanted a brief description of the game, and buttons to start the game or read the rules
+
+* [intro modal wireframe](docs/screenshots/wireframe2.png)
+
+Along the way, parts of the design changed. these include
+
+* Having a modal pop-up when the user selects the wrong cards, appearing in the centre of the screen, rather than a small area in the right.
+* The removal of the dice roll section, where i wanted a picture of a D20, showing the number of the roll when the user selects roll dice.
+* Deciding not to go with the idea of choosing a class and having different skills that would affect the game results.
+* Changing the intro paragraph 
+* Adding a header and footer, with links to social media.
+
+### **Color Scheme:**
+
+I have kept the color scheme relevent to the dark theme of Mordor - this being black, dark gray and red.
+This matches the theme of the game, being that you are in enemy teritory and by having a color scheme it keeps it aesthetically pleasing.
+
+## **Features**
+ 
 ## ***Background*** 
 
 I used an image of Mordor and Mount doom in the distance, to feel linked to the game - as if you are journeying across mordor to get to Mount doom and each stage completed progresses you towards that goal. 
@@ -63,3 +90,77 @@ I used an image of Mordor and Mount doom in the distance, to feel linked to the 
 To keep the image from being disrupted from the cards and other elements, i made the color of the cards slightly transparent.
 
 ![Background Image](assets/images/mordor.webp)
+
+##  ***Header Element***
+The header element contains the following: -
+
+### ***Title:***
+
+  * I used the quote from the film where Boromir says 'one does not simply walk into Mordor' and made the title 'A walk through Mordor'.
+  * I did not include an anchor tag here for this project since the app is only a single page of HTML.
+
+  * [Header image.](docs/screenshots/header.png)
+
+  # **Main game page:**
+
+  * The game page features four stages, including rows of 2,3,4 and 5 face down cards.
+  * The rows are disabled until the user completes the stage they are on.
+  * The cars turn green if the user selects the correct card and red if they select the wrong card. 
+
+  * [Main game image.](docs/screenshots/maingame.png)
+
+  # **Start modal pop-up**
+
+* This includes a brief description of the game and story around what the user is doing in the game.
+* It also has 2 buttons that the user can select, to either start the game, or read the rules.
+
+* [Start modal image.](docs/screenshots/intro.png)
+
+# **Rules modal pop-up**
+
+* Bullet points on have the game works
+* Includes a button to start the game when the user is ready
+
+*[Rules modal image.](docs/screenshots/rules.png)
+
+# **Incorrect card selected modal pop-up**
+
+* When the user selects a wrong card choice, it turns red and a modal will pop up showing -
+
+* An image of a randomly selected enemy from a list of 5.
+* A message describing that they have encountered an ememy and must roll a d20 dice to continue the game.
+* The dice roll required to continue the game. 
+* A button to roll the dice.
+
+[Incorrect card selected modal pop-up image.](docs/screenshots/incorrect-modal.png)
+
+# **dice roll modal pop-up**
+
+* When the user clicks of the roll dice button, a modal will pop up showing - 
+
+* The randomly rolled d20 rice result
+* A message in green if they have rolled higher than the required dice roll
+* A message in red if they have rolled lower than the required dice roll.
+* An X in the corner of the modal to click which will close the modal -
+the game will reload after the X is clicked when the user rolls under the required dice roll.
+
+* [Dice roll lose result image.](docs/screenshots/diceroll.png)
+* [Dice roll win result image.](docs/screenshots/diceroll2.png)
+
+# **WIN modal pop-up**
+
+* If the user selects the correct card on all stages they win the game and a modal will pop-up showing -
+
+* An image of Sauron being destroyed 
+* A message that they have won the game 
+* An X in the corner of the modal to close the modal and reload the game.
+
+* [Win modal pop-up image.](docs/screenshots/win.png)
+
+# **Footer element**
+
+* The footer had 2 clickable icons that will load a new page in a seperate browser. these being - 
+
+* A link to an instagram and facebook page for the user to follow me.
+
+* [Footer image.](docs//screenshots/footer.png)

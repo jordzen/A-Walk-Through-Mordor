@@ -224,6 +224,20 @@ Besides the occasional missing semicolon, the only thing shown by JsHint was the
 
  * Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (stage, currentStage, card, showFinishModal, selectableRows, enableNextStage, showModal)
 
+ ### **Lighthouse Scores**
+#### **Test conditions**
+
+* I did all lighthouse tests in incognito mode to avoid interference from browser extensions. 
+* I ran the tests for both mobile and desktop. 
+
+#### ***Desktop Version:***
+
+[Desktop Lighthouse Score](docs/screenshots/desktop-lighthouse.png)
+
+#### ***Mobile Version:***
+
+![Mobile Lighthouse Score](docs/screenshots/mobile-lighthouse.png)
+
 
 ## **Deployment**
 I deployed the page on GitHub pages via the following procedure: -

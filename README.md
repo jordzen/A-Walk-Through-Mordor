@@ -203,30 +203,30 @@ During the development process, I was manually testing in the following ways:-
 
 ### ***Bugs and Fixes:***
 
-- Modal Display Problem
+1. Modal Display Problem
 
 * Bug: Modals were not displaying or hiding properly when they should.
 * Fix: Double-check the CSS and JavaScript functions responsible for showing/hiding modals to ensure they work correctly in all scenarios.
 create functions to show and hide the modals and add them to javascript functions for when the modals should appear.
 
-- Card Clickability depending on row not working.
+2. Card Clickability depending on row not working.
 
 * Bug: Cards in later rows remain clickable when they should be disabled.
 * Fix: Adjust the logic in enableNextStage function to properly enable/disable card interactions based on the current stage.
 I changed the style.pointerEvents of the cards so that they are only clickable when on the correct stage.
 
-- Page Reloading when the user clicks on the X in the corner of the Modal, after passing the dice roll challenge.
+3. Page Reloading when the user clicks on the X in the corner of the Modal, after passing the dice roll challenge.
 
 * Bug: The page is not meant to reload if the user passes the dice roll stage and they click on the X to close the modal
 * fix: create an onclick function for the span (X) that reloads the page when it is clicked. Put this inside the function for when the user loses the dice roll requirement.
 Now by clicking on the span(X) when the user wins the dice roll, it closes the modal and does not reload the page.
 
-- Background image not loading on deployed website
+4. Background image not loading on deployed website
 
 * Bug: The background image was loading in code anywhere environment but not on the deployed website through GitHub.
 * Fix: The image file path was missing a forward slash at the start, before assets.
 
-- Some content was not loading as intented by trying to manipulate elements using javascript.
+5. Some content was not loading as intented by trying to manipulate elements using javascript.
 
 * Bug: The text content I wanted to appear on the dice result modal was not loading during gameplay.
 * Fix: I found that when I was pulling certain classes or IDs using JavaScript, I missed out on the starting document. part. 

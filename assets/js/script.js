@@ -149,18 +149,18 @@ function showModal() {
      * reload the page if the user clicks on the X, after losing the dice roll.
      */
     let rollDiceBtn = document.getElementById("roll-dice-btn");
-    rollDiceBtn.onclick = function() {
+        rollDiceBtn.onclick = function() {
         modal.style.display = "none";
         showDiceResult();
         let diceResult = rollD20();
         document.getElementById("result").textContent = "You rolled the dice! Result: " + diceResult;
         
-        if (diceResult < randomIncorrectImage.threshold) {
-            // User loses
-            document.getElementById("result-lose").textContent = "Darkness takes you. YOU LOSE.";
-            document.getElementById("result-win").style.display = "none"; // Hide win result
-            document.getElementById("dice-close").onclick = function() {
-                location.reload(); // Reload the page to play again   
+    if (diceResult < randomIncorrectImage.threshold) {
+        // User loses
+        document.getElementById("result-lose").textContent = "Darkness takes you. YOU LOSE.";
+        document.getElementById("result-win").style.display = "none"; // Hide win result
+        document.getElementById("dice-close").onclick = function() {
+            location.reload(); // Reload the page to play again   
             };
         } else {
             // User wins
@@ -171,7 +171,6 @@ function showModal() {
             }
         }
     };
-
     modal.style.display = "block";
 }
 

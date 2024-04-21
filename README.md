@@ -254,6 +254,14 @@ Besides the occasional missing semicolon, the only thing shown by JsHint was the
 
  * Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (stage, currentStage, card, showFinishModal, selectableRows, enableNextStage, showModal)
 
+ Fix: 
+
+extract the inline function that was handling the click event into a separate function named cardClickHandler. This function is now responsible for handling the click event, and it receives all relevant information as parameters.
+
+Using .bind(): The .bind() method is used to pre-configure the parameters for cardClickHandler. This ensures that each card gets its specific handling function bound with the correct parameters (stage, cardIndex, correctIndex), avoiding any closure-related issues.
+
+event.currentTarget: Inside cardClickHandler, the actual card element is accessed using event.currentTarget, ensuring that the correct card element is manipulated regardless of how the handler is attached or executed.
+
  ### **Lighthouse Scores**
 #### **Test conditions**
 

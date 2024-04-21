@@ -164,3 +164,36 @@ the game will reload after the X is clicked when the user rolls under the requir
 * A link to an instagram and facebook page for the user to follow me.
 
 ![Footer image.](docs//screenshots/footer.png)
+
+## **Future-Enhancements**
+
+This game was really fun to make and I was very passionate about it, but due to the project deadline, I have left some extra ideas out and will look to add them in the future.
+These include -
+
+  * Game sounds 
+  - Have noises for when the incorrect card choice is selected and an enemy pops up.
+  - Have sound for the dice roll
+  - Have sound for when you win the game 
+  - Have Lord of the rings music playing during the game.
+
+  * Dice roll animation - Show the dice rolling and landing on the result number.
+
+  * Create different classes for the user to select on game load, such as elf, dwarf, man, which will effect dice roll requirment for different enemys.  
+
+  ## **Testing Phase**
+
+
+## **Deployment**
+I deployed the page on GitHub pages via the following procedure: -
+
+1. From the project's [repository](https://github.com/jordzen/A-Walk-Through-Mordor), go to the **Settings** tab.
+1. From the left-hand menu, select the **Pages** tab.
+1. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
+1. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
+
+You  can find the live site via the following URL - [Live game](https://jordzen.github.io/A-Walk-Through-Mordor/)
+***
+
+## **Credits**
+
+### **Media:**

@@ -67,56 +67,61 @@ function createAllRows() {
     }
 }
 
-// Function to create cards for a given row
+/**
+ * Function to create cards for a given row
+ * Create a label to display the stage number
+ * Generate a random index for the correct card
+ * set the correct card to true
+ * Disable card selection for rows after the first one
+ */ 
 function createRow(stage, num) {
     let row = document.createElement('div');
     row.classList.add('row');
 
-// Create a label to display the stage number
-let stageLabel = document.createElement('h2');
-stageLabel.textContent = `Stage ${stage + 1}`;
-row.appendChild(stageLabel);
+    let stageLabel = document.createElement('h2');
+    stageLabel.textContent = `Stage ${stage + 1}`;
+    row.appendChild(stageLabel);
 
-// Generate a random index for the correct card
-let correctIndex = Math.floor(Math.random() * num);
+    let correctIndex = Math.floor(Math.random() * num);
 
+    for (let i = 0; i < num; i++) {
+        let card = document.createElement('div');
+        card.classList.add('card');
+        if (i === correctIndex) {
+            card.dataset.correct = 'true';
+        }
+        card.addEventListener('click', cardClickHandler.bind(card, stage, i, correctIndex));
+        row.appendChild(card);
+    }
+
+    let gameContainer = document.getElementById('game');
+    gameContainer.appendChild(stageLabel);
+    gameContainer.appendChild(row);
+    if (stage !== 0) {
+        row.style.pointerEvents = 'none';
+    }
+}
 
 /**
- * Set the correct card style
  * Turn the card green if the user selects the correct card
  * Turn the card red if the user selects a wrong card and display the modal pop-up with enemy image
  * Allow the user to select cards on the next stage if they selected the correct card on their current stage.
  * If the user selects the correct card on the final stage, show the Finish modal pop-up.
- * Append stageLabel and row to the game container
- */
-for (let i = 0; i < num; i++) {
-    let card = document.createElement('div');
-    card.classList.add('card');
-    if (i === correctIndex) {
-    card.dataset.correct = true;
-    }
-    card.addEventListener('click', function() {
-        if (stage === currentStage && card.dataset.correct === 'true') {
-            card.style.backgroundColor = 'green';
-            if (currentStage === numRows - 1) {
-                showFinishModal();
-            } else {
-                currentStage++;
-                selectableRows++;
-                enableNextStage();
-            }
+ */ 
+function cardClickHandler(stage, cardIndex, correctIndex, event) {
+    let card = event.currentTarget;
+    if (stage === currentStage && cardIndex === correctIndex) {
+        card.style.backgroundColor = 'green';
+        if (currentStage === numRows - 1) {
+            showFinishModal();
         } else {
-            card.style.backgroundColor = '#ab2828';
-            showModal();
+            currentStage++;
+            selectableRows++;
+            enableNextStage();
         }
-    });
-        row.appendChild(card);
-    }
-        let gameContainer = document.getElementById('game');
-        gameContainer.appendChild(stageLabel);
-        gameContainer.appendChild(row);
-            if (stage !== 0) {
-            row.style.pointerEvents = 'none'; // Disable card selection for rows after the first one
+    } else {
+        card.style.backgroundColor = '#ab2828';
+        showModal();
     }
 }
 

@@ -99,7 +99,7 @@ The header element contains the following: -
   * I used the quote from the film where Boromir says 'one does not simply walk into Mordor' and made the title 'A walk through Mordor'.
   * I did not include an anchor tag here for this project since the app is only a single page of HTML.
 
-  * [Header image.](docs/screenshots/header.png)
+  ![Header image.](docs/screenshots/header.png)
 
   # **Main game page:**
 
@@ -107,21 +107,21 @@ The header element contains the following: -
   * The rows are disabled until the user completes the stage they are on.
   * The cars turn green if the user selects the correct card and red if they select the wrong card. 
 
-  * [Main game image.](docs/screenshots/maingame.png)
+  ![Main game image.](docs/screenshots/maingame.png)
 
   # **Start modal pop-up**
 
 * This includes a brief description of the game and story around what the user is doing in the game.
 * It also has 2 buttons that the user can select, to either start the game, or read the rules.
 
-* [Start modal image.](docs/screenshots/intro.png)
+![Start modal image.](docs/screenshots/intro.png)
 
 # **Rules modal pop-up**
 
 * Bullet points on have the game works
 * Includes a button to start the game when the user is ready
 
-*[Rules modal image.](docs/screenshots/rules.png)
+![Rules modal image.](docs/screenshots/rules.png)
 
 # **Incorrect card selected modal pop-up**
 
@@ -132,7 +132,7 @@ The header element contains the following: -
 * The dice roll required to continue the game. 
 * A button to roll the dice.
 
-[Incorrect card selected modal pop-up image.](docs/screenshots/incorrect-modal.png)
+![Incorrect card selected modal pop-up image.](docs/screenshots/incorrect-modal.png)
 
 # **dice roll modal pop-up**
 
@@ -144,8 +144,8 @@ The header element contains the following: -
 * An X in the corner of the modal to click which will close the modal -
 the game will reload after the X is clicked when the user rolls under the required dice roll.
 
-* [Dice roll lose result image.](docs/screenshots/diceroll.png)
-* [Dice roll win result image.](docs/screenshots/diceroll2.png)
+![Dice roll lose result image.](docs/screenshots/diceroll.png)
+![Dice roll win result image.](docs/screenshots/diceroll2.png)
 
 # **WIN modal pop-up**
 
@@ -155,7 +155,7 @@ the game will reload after the X is clicked when the user rolls under the requir
 * A message that they have won the game 
 * An X in the corner of the modal to close the modal and reload the game.
 
-* [Win modal pop-up image.](docs/screenshots/win.png)
+![Win modal pop-up image.](docs/screenshots/win.png)
 
 # **Footer element**
 
@@ -163,4 +163,4 @@ the game will reload after the X is clicked when the user rolls under the requir
 
 * A link to an instagram and facebook page for the user to follow me.
 
-* [Footer image.](docs//screenshots/footer.png)
+![Footer image.](docs//screenshots/footer.png)

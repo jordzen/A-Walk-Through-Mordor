@@ -80,14 +80,21 @@ row.appendChild(stageLabel);
 // Generate a random index for the correct card
 let correctIndex = Math.floor(Math.random() * num);
 
+
+/**
+ * Set the correct card style
+ * Turn the card green if the user selects the correct card
+ * Turn the card red if the user selects a wrong card and display the modal pop-up with enemy image
+ * Allow the user to select cards on the next stage if they selected the correct card on their current stage.
+ * If the user selects the correct card on the final stage, show the Finish modal pop-up.
+ * Append stageLabel and row to the game container
+ */
 for (let i = 0; i < num; i++) {
     let card = document.createElement('div');
     card.classList.add('card');
-    // Set the correct card style
     if (i === correctIndex) {
     card.dataset.correct = true;
     }
-    //Click function to show if card selected was correct or incorrect
     card.addEventListener('click', function() {
         if (stage === currentStage && card.dataset.correct === 'true') {
             card.style.backgroundColor = 'green';
@@ -100,13 +107,11 @@ for (let i = 0; i < num; i++) {
             }
         } else {
             card.style.backgroundColor = '#ab2828';
-            // Show the modal with the message and image
             showModal();
         }
     });
         row.appendChild(card);
     }
-       // Append stageLabel and row to the game container
         let gameContainer = document.getElementById('game');
         gameContainer.appendChild(stageLabel);
         gameContainer.appendChild(row);
@@ -115,25 +120,34 @@ for (let i = 0; i < num; i++) {
     }
 }
 
-// Function to roll a d20 dice
+// Function to roll a d20 dice and recieve a random result
 function rollD20() {
     return Math.floor(Math.random() * 20) + 1;
 }
 
-// Show modal with message and image
+/**
+ * Show modal with message and image
+ * Randomly select an image when the user selects an incorrect card
+ * show the required dice roll to continue the game
+ */ 
 function showModal() {
     let modal = document.getElementById("incorrect-card-modal");
     let modalMessage = document.getElementById("modal-message");
     let modalImage = document.getElementById("modal-image");
     let modalThreshold = document.getElementById("modal-threshold");
 
-    // Get a random incorrect image
     let randomIncorrectImage = incorrectImages[Math.floor(Math.random() * incorrectImages.length)];
 
     modalMessage.textContent = randomIncorrectImage.message;
-    modalImage.innerHTML = `<img src="${randomIncorrectImage.image}" alt="Incorrect Image">`;
+    modalImage.innerHTML = `<img src="${randomIncorrectImage.image}" alt="Image of an enemy you have encountered">`;
     modalThreshold.textContent = `Required dice roll: ${randomIncorrectImage.threshold}+`;
     
+    /**
+     * Function to show the dice result modal pop-up when the user clicks on the roll dice button
+     * Recieve and display the result from the rollD20 function.
+     * display a message to show if the user has passed or failed the dice roll challenge
+     * reload the page if the user clicks on the X, after losing the dice roll.
+     */
     let rollDiceBtn = document.getElementById("roll-dice-btn");
     rollDiceBtn.onclick = function() {
         modal.style.display = "none";
@@ -172,7 +186,9 @@ document.getElementById("finish-modal").style.display = "none";
 location.reload(); 
 };
 
-// Function to enable cards in the next selectable row
+/**
+ * Function to enable cards in the next selectable row to be clicked
+ */
 function enableNextStage() {
     let rows = document.getElementsByClassName('row');
     for (let i = 0; i < numRows; i++) {

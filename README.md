@@ -182,6 +182,46 @@ These include -
 
   ## **Testing Phase**
 
+## **During Development Testing**
+
+During the development process, I was manually testing in the following ways:-
+
+1. Manually testing each element for appearance and responsiveness via a simulated live server in codeanywhere.
+    
+1. Published the page via GitHub pages and shared with friends and family and asked for feedback.
+
+### ***Manual Testing:***
+* During testing, I used three different browsers to ensure cross-compatibility. The desktop browsers used were -
+
+  1. Chrome
+  2. Firefox  
+  4. Edge
+
+* I used the dev tools to simulate different screen sizes/devices.
+
+### ***Bugs and Fixes:***
+
+## **Post Development Testing**
+### **Validators**
+
+#### ***HTML*** - [https://validator.w3.org/nu/]
+
+Returned no errors when checking the HTML document.
+
+![Validator result](docs/screenshots/html-validate.png)
+
+#### ***CSS*** - [https://jigsaw.w3.org/css-validator/]
+
+All pages tested, no issues found via URL or file upload.  
+  
+![CSS validator result](docs/screenshots/css-validate.png)
+
+#### ***JSHint*** - [https://jshint.com/](https://jshint.com/)
+
+Besides the occasional missing semicolon, the only thing shown by JsHint was the below  warning: -
+
+ * Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (stage, currentStage, card, showFinishModal, selectableRows, enableNextStage, showModal)
+
 
 ## **Deployment**
 I deployed the page on GitHub pages via the following procedure: -
@@ -194,6 +234,15 @@ I deployed the page on GitHub pages via the following procedure: -
 You  can find the live site via the following URL - [Live game](https://jordzen.github.io/A-Walk-Through-Mordor/)
 ***
 
+### **Honorable mentions:** 
+
+A massive thankyou to David Bowers (https://github.com/dnlbowers) who has helped me alot through my course and this project and given me motivation when struggling.
+
 ## **Credits**
 
-### **Media:**
+* All fonts imported from - [Google Fonts](https://fonts.google.com/)
+* Icons in the footer were taken from [Font Awesome](https://fontawesome.com)
+* All content was writen by myself and the images are AI generated.
+* The theme and game are based on J.R.R. Tolkien's The Lord Of The Rings. 
+* https://validator.w3.org/ was used to validate HTML.
+* https://jigsaw.w3.org/css-validator/validator was used to validate CSS.

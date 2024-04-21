@@ -3,12 +3,9 @@ const numRows = 4;
 const numCards = [2, 3, 4, 5];
 
 let currentStage = 0;
-let correctCardIndices = [];
 let selectableRows = 1;
-let span = document.getElementsByClassName("close")[0];
 
 // Images to be displayed
-    
 const incorrectImages = [
     { image: "assets/images/ork-guard.webp", threshold: 7, message: "A patrolling Ork Guard has spotted you! \n Roll the dice to fight back!" },
     { image: "assets/images/sauron.webp", threshold: 14, message: "You Have been tempted by the ring and put it on. \n You are now in the enemys gaze! roll to overpower temptaion" },
@@ -45,11 +42,6 @@ function showFinishModal() {
 //function to show the dice roll result
 function showDiceResult() {
     document.getElementById("dice-result").style.display = "block";
-}
-
-//function to show hide dice roll result
-function hideDiceResult() {
-    document.getElementById("dice-result").style.display = "none";
 }
 
 let elements = document.querySelectorAll('.start-game-btn');
@@ -95,12 +87,12 @@ for (let i = 0; i < num; i++) {
     if (i === correctIndex) {
     card.dataset.correct = true;
     }
-    //Click function to show if card sleected was correct or incorrect
+    //Click function to show if card selected was correct or incorrect
     card.addEventListener('click', function() {
         if (stage === currentStage && card.dataset.correct === 'true') {
             card.style.backgroundColor = 'green';
             if (currentStage === numRows - 1) {
-                showFinishModal()
+                showFinishModal();
             } else {
                 currentStage++;
                 selectableRows++;
@@ -164,21 +156,21 @@ function showModal() {
                 document.getElementById("result-win").textContent = "You overcome the obstacle, you gather yourself and carry on.";
             }
         }
-    }
+    };
 
     modal.style.display = "block";
 }
 
 // When the user clicks on <span>(x) on the dice result modal, close the modal
 document.getElementById("dice-close").onclick = function() {
-document.getElementById("dice-result").style.display = "none"
-}
+document.getElementById("dice-result").style.display = "none";
+};
 
 // When the user clicks on <span>(x) on the finish modal, close the modal and reload the page
 document.getElementById("reload-close").onclick = function() {
 document.getElementById("finish-modal").style.display = "none";
 location.reload(); 
-}
+};
 
 // Function to enable cards in the next selectable row
 function enableNextStage() {
@@ -200,10 +192,10 @@ function enableNextStage() {
 // Start the game function
 function startGame() {
     createAllRows();
-    enableNextStage()
+    enableNextStage();
 }
 
 // Show the start modal when the page is loaded
 window.onload = function() {
     showStartModal();
-}
+};

@@ -8,7 +8,6 @@
 }
 
 /* General styles */
-
 main {
     /* make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
@@ -385,7 +384,6 @@ li {
 }
 
 /* Responsive Design for large phones and larger */
-
 @media screen and (min-width: 400px) {
 
     #game {
@@ -529,7 +527,6 @@ li {
 }
 
 /* Responsive Design for Tablets and larger */
-
 @media screen and (min-width: 768px) {
 
     #game {
@@ -573,7 +570,6 @@ li {
         margin: 10px 0 10px 0;
     }
 
-    /* Footer icons*/
     .fa-brands.fa-square-instagram {
         font-size: 30px;
     }
@@ -592,7 +588,6 @@ li {
 }
 
 /* Responsive Design for Laptops and larger */
-
 @media screen and (min-width: 992px) {
 
     #game {
@@ -658,7 +653,6 @@ li {
 }
 
 /* Responsive Design for Large Laptops and larger */
-
 @media screen and (min-width: 1200px) {
 
     #game {

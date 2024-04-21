@@ -61,12 +61,12 @@ I thought it would be a cool idea to have the user start at the entrance to mord
 ring of power.
 I used the quote from the film where Boromir says 'one does not simply walk into Mordor' and made the title 'A walk through Mordor'.
 
-* [Game concept drawing.](docs/screenshots/wireframe3.png)
-* [Main Game page wireframe](docs/screenshots/wireframe1.png)
+![Game concept drawing.](docs/screenshots/wireframe3.png)
+![Main Game page wireframe](docs/screenshots/wireframe1.png)
 
 On page load, I wanted a brief description of the game, and buttons to start the game or read the rules
 
-* [intro modal wireframe](docs/screenshots/wireframe2.png)
+![intro modal wireframe](docs/screenshots/wireframe2.png)
 
 Along the way, parts of the design changed. these include
 
@@ -134,7 +134,7 @@ The header element contains the following: -
 
 ![Incorrect card selected modal pop-up image.](docs/screenshots/incorrect-modal.png)
 
-# **dice roll modal pop-up**
+# **Dice roll modal pop-up**
 
 * When the user clicks of the roll dice button, a modal will pop up showing - 
 

@@ -167,7 +167,9 @@ the game will reload after the X is clicked when the user rolls under the requir
 
 ## **Future-Enhancements**
 
-This game was really fun to make and I was very passionate about it, but due to the project deadline, I have left some extra ideas out and will look to add them in the future.
+The current state of the game is ready for release, but these are the future enhancements I would like to add.
+
+This game was really fun to make and I was very passionate about it, but due to the project deadline, I have left some extra ideas out and will look to add them in the future. 
 These include -
 
   * Game sounds 

@@ -203,26 +203,31 @@ During the development process, I was manually testing in the following ways:-
 
 ### ***Bugs and Fixes:***
 
-1. Modal Display Problem
+- Modal Display Problem
+
 * Bug: Modals were not displaying or hiding properly when they should.
 * Fix: Double-check the CSS and JavaScript functions responsible for showing/hiding modals to ensure they work correctly in all scenarios.
 create functions to show and hide the modals and add them to javascript functions for when the modals should appear.
 
-1. Card Clickability depending on row not working.
+- Card Clickability depending on row not working.
+
 * Bug: Cards in later rows remain clickable when they should be disabled.
 * Fix: Adjust the logic in enableNextStage function to properly enable/disable card interactions based on the current stage.
 I changed the style.pointerEvents of the cards so that they are only clickable when on the correct stage.
 
-1. Page Reloading when the user clicks on the X in the corner of the Modal, after passing the dice roll challenge.
+- Page Reloading when the user clicks on the X in the corner of the Modal, after passing the dice roll challenge.
+
 * Bug: The page is not meant to reload if the user passes the dice roll stage and they click on the X to close the modal
 * fix: create an onclick function for the span (X) that reloads the page when it is clicked. Put this inside the function for when the user loses the dice roll requirement.
 Now by clicking on the span(X) when the user wins the dice roll, it closes the modal and does not reload the page.
 
-1. Background image not loading on deployed website
+- Background image not loading on deployed website
+
 * Bug: The background image was loading in code anywhere environment but not on the deployed website through GitHub.
 * Fix: The image file path was missing a forward slash at the start, before assets.
 
-1. Some content was not loading as intented by trying to manipulate elements using javascript.
+- Some content was not loading as intented by trying to manipulate elements using javascript.
+
 * Bug: The text content I wanted to appear on the dice result modal was not loading during gameplay.
 * Fix: I found that when I was pulling certain classes or IDs using JavaScript, I missed out on the starting document. part. 
 - Before would be .getElementById("result-win").textContent
@@ -257,7 +262,7 @@ Besides the occasional missing semicolon, the only thing shown by JsHint was the
 
 #### ***Desktop Version:***
 
-[Desktop Lighthouse Score](docs/screenshots/desktop-lighthouse.png)
+![Desktop Lighthouse Score](docs/screenshots/desktop-lighthouse.png)
 
 #### ***Mobile Version:***
 
@@ -280,7 +285,7 @@ You  can find the live site via the following URL - [Live game](https://jordzen.
 
 ### **Honorable mentions:** 
 
-A massive thankyou to David Bowers (https://github.com/dnlbowers) who has helped me alot through my course and this project and given me motivation when struggling.
+A massive thankyou to David Bowers (https://github.com/dnlbowers) who has helped me alot through my course and this project and had given me motivation when struggling.
 
 ## **Credits**
 
@@ -290,3 +295,5 @@ A massive thankyou to David Bowers (https://github.com/dnlbowers) who has helped
 * The theme and game are based on J.R.R. Tolkien's The Lord Of The Rings. 
 * https://validator.w3.org/ was used to validate HTML.
 * https://jigsaw.w3.org/css-validator/validator was used to validate CSS.
+* https://jshint.com/ was used to validate Javascript.
+* https://ui.dev/amiresponsive was used for my responsive image in this file.
